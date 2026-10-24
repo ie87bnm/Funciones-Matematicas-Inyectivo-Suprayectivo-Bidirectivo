@@ -1,3 +1,3 @@
-# diagrama_algoritmo_precio
+# 01diagrama_algoritmo_precio
 # Funciones-Matematicas-Inyectivo-Suprayectivo-Bidirectivo
 
