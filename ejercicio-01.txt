@@ -1,0 +1,49 @@
+// ALGORITMO: CalcularSalarioNetoQuincenal
+INICIO
+
+    // DECLARAR: Variables de la simulación de datos
+    DECLARAR DIAS_PERIODO Como Entero
+    DECLARAR pagoPorDia Como Real
+    DECLARAR salarioBruto Como Real
+    DECLARAR descuentoSeguridadSocial Como Real
+    DECLARAR descuentoISR Como Real
+    DECLARAR totalDescuentos Como Real
+    DECLARAR salarioNetoFinal Como Real
+    
+    // DECLARAR: Porcentajes fijos de retención
+    DECLARAR PORCENTAJE_SEG_SOCIAL Como Real
+    DECLARAR PORCENTAJE_ISR Como Real
+    
+    // Asignación de valores fijos del sistema
+    DIAS_PERIODO <- 14
+    PORCENTAJE_SEG_SOCIAL <- 0.08 
+    PORCENTAJE_ISR <- 0.15        
+    
+    // Entrada de datos del usuario
+    ESCRIBIR "Por favor, ingrese el salario equivalente a un día de trabajo:"
+    LEER pagoPorDia
+    
+    // Procesamiento y cálculo del salario e impuestos
+    salarioBruto <- DIAS_PERIODO * pagoPorDia
+    descuentoSeguridadSocial <- salarioBruto * PORCENTAJE_SEG_SOCIAL
+    descuentoISR <- salarioBruto * PORCENTAJE_ISR
+    totalDescuentos <- descuentoSeguridadSocial + descuentoISR
+    salarioNetoFinal <- salarioBruto - totalDescuentos
+    
+    // Salida y desglose de resultados en pantalla
+    ESCRIBIR "========================================"
+    ESCRIBIR "    RECIBO DE PAGO (PERIODO: 14 DIAS)  "
+    ESCRIBIR "========================================"
+    ESCRIBIR "Días Trabajados: ", DIAS_PERIODO
+    ESCRIBIR "Salario por Día: $", pagoPorDia
+    ESCRIBIR "Salario Bruto Calculado: $", salarioBruto
+    ESCRIBIR "----------------------------------------"
+    ESCRIBIR "(-) Descuento Seguridad Social (8%): $", descuentoSeguridadSocial
+    ESCRIBIR "(-) Descuento ISR (15%): $", descuentoISR
+    ESCRIBIR "----------------------------------------"
+    ESCRIBIR "Total de Retenciones Aplicadas: $", totalDescuentos
+    ESCRIBIR "========================================"
+    ESCRIBIR "SALARIO NETO FINAL A PAGAR: $", salarioNetoFinal
+    ESCRIBIR "========================================"
+
+FIN
